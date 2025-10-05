@@ -5,7 +5,7 @@ const config = require('../config/config');
  * API client for the financial service
  */
 const apiClient = axios.create({
-  baseURL: config.financialApi.baseUrl,
+  baseURL: config.financialApi.transactionServiceBaseUrl,
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json'

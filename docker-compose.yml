@@ -1,0 +1,17 @@
+services:
+  reports:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - financer-services_back-end
+    ports:
+      - "8085:8085"
+    env_file:
+      - stack.env
+
+networks:
+  financer-services_back-end:
+    external: true
+    
